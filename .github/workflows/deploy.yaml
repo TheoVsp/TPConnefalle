@@ -1,0 +1,16 @@
+name: Mon Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      monInput:
+        description: 'Entrez quelque chose ici'     
+        required: true
+        default: 'valeur par défaut'
+
+jobs:
+  monJob:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Afficher l'input
+      run: echo "${{ github.event.inputs.monInput }}"
+
