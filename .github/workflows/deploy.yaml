@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Démarrage workflow
-      run: echo "Démarrage du workflow sur ${{ github.event.inputs.server }}"
+      run: echo "Démarrage du workflow sur ${{ github.ref }}"
 
