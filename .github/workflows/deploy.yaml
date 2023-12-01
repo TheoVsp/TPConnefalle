@@ -1,16 +1,16 @@
-name: Mon Workflow
+name: Déploiement application
 on:
   workflow_dispatch:
     inputs:
-      monInput:
-        description: 'Entrez quelque chose ici'     
+      server:
+        description: 'Environnement de déploiement'     
         required: true
-        default: 'valeur par défaut'
+        default: 'dev'
 
 jobs:
-  monJob:
+  deploy-env:
     runs-on: ubuntu-latest
     steps:
-    - name: Afficher l'input
+    - name: afficher environnement
       run: echo "${{ github.event.inputs.monInput }}"
 
