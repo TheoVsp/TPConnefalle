@@ -13,4 +13,7 @@ jobs:
     steps:
     - name: Démarrage workflow
       run: echo "Démarrage du workflow sur ${{ github.ref }}"
+    - name: Récupération code
+      run: echo "Recupération code"
+      if: ${{ github.ref == "refs/heads/main"}}
 
