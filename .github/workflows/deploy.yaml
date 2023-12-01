@@ -11,6 +11,6 @@ jobs:
   deploy-env:
     runs-on: ubuntu-latest
     steps:
-    - name: afficher environnement
-      run: echo "${{ github.event.inputs.monInput }}"
+    - name: Démarrage workflow
+      run: echo "Démarrage du workflow sur ${{ github.event.inputs.server }}"
 
